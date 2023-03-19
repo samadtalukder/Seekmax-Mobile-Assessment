@@ -12,9 +12,9 @@ import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
 /**
- * Created by Samad Talukder on 18 March 2023.
- * github.com/samadtalukder
- **/
+ * Module that provides the [AuthDataSource], [HomeDataSource] implementation.
+ * Uses [SeeksMaxApi] to perform the authentication, job list, etc requests.
+ */
 
 @Module
 @InstallIn(SingletonComponent::class)

@@ -8,9 +8,9 @@ import com.samad_talukder.seekmaxhomeassignment.utils.Constants.PREFS_NAME
 import javax.inject.Inject
 
 /**
- * Created by Samad Talukder on 18 March 2023.
- * github.com/samadtalukder
- **/
+ * A singleton class that provides an interface to the shared preferences file for storing data.
+ * @param application The application context.
+ */
 
 class SharedPref @Inject constructor(application: Application) {
 
@@ -29,6 +29,4 @@ class SharedPref @Inject constructor(application: Application) {
         operation(editor)
         editor.apply()
     }
-
-
 }

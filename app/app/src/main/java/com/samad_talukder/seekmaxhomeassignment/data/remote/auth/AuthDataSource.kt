@@ -5,9 +5,8 @@ import com.samad_talukder.seekmaxhomeassignment.domain.model.LoginResponse
 import retrofit2.Response
 
 /**
- * Created by Samad Talukder on 18 March 2023.
- * github.com/samadtalukder
- **/
+ * Data source interface for authentication related API calls.
+ */
 
 interface AuthDataSource {
     suspend fun login(loginRequest: LoginRequest): Response<LoginResponse>

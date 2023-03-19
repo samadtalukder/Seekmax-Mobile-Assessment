@@ -19,8 +19,10 @@ import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
 /**
- * Created by Samad Talukder on 18 March 2023.
- * github.com/samadtalukder
+ * Dagger Hilt module for providing API related dependencies.
+ * This module provides dependencies such as [AuthTokenManager], [HttpLoggingInterceptor],
+ * [AuthTokenInterceptor], [GsonConverterFactory], [OkHttpClient], [Retrofit] and [SeeksMaxApi].
+ * @constructor Creates an instance of [ApiModule].
  **/
 
 @Module

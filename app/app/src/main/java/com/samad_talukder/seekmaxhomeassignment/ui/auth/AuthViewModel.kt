@@ -17,9 +17,11 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 /**
- * Created by Samad Talukder on 18 March 2023.
- * github.com/samadtalukder
- **/
+ * ViewModel class responsible for managing authentication-related UI data and events.
+ * @property application The [Application] instance used to create the ViewModel.
+ * @property authUseCase The [AuthUseCase] used to perform authentication.
+ * @property authTokenManager The [AuthTokenManager] used to manage user authentication tokens.
+ */
 
 @HiltViewModel
 class AuthViewModel @Inject constructor(
@@ -32,8 +34,6 @@ class AuthViewModel @Inject constructor(
         MutableLiveData()
     val loginResponse: LiveData<ApiResult<LoginResponse>> =
         _loginResponse
-
-    var token = MutableLiveData<String>()
 
     fun login(context: Context, loginRequest: LoginRequest) = viewModelScope.launch {
         _loginResponse.value = ApiResult.Loading

@@ -5,9 +5,9 @@ import com.samad_talukder.seekmaxhomeassignment.data.repository.auth.AuthReposit
 import com.samad_talukder.seekmaxhomeassignment.domain.model.LoginRequest
 
 /**
- * Created by Samad Talukder on 18 March 2023.
- * github.com/samadtalukder
- **/
+ * The use case for authenticating a user.
+ * @property authRepository The repository for making network calls.
+ */
 
 class AuthUseCase(private val authRepository: AuthRepository) {
     suspend fun execute(context: Context, loginRequest: LoginRequest) =

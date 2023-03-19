@@ -13,9 +13,10 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 /**
- * Created by Samad Talukder on 18 March 2023.
- * github.com/samadtalukder
- **/
+ * ViewModel class that handles business logic for fetching all job list data from the repository
+ * @param application Application object used to create the ViewModel
+ * @param allJobListUseCase Use case object for fetching all job list data
+ */
 
 @HiltViewModel
 class AllJobListViewModel @Inject constructor(

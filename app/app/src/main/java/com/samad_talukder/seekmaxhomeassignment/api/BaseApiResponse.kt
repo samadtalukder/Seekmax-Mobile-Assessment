@@ -4,11 +4,11 @@ package com.samad_talukder.seekmaxhomeassignment.api
 import retrofit2.Response
 
 /**
- * Created by Samad Talukder on 18 March 2023.
- * github.com/samadtalukder
- **/
+ * A base class for handling API responses.
+ */
 
 abstract class BaseApiResponse {
+
     suspend fun <T : Any> safeApiCall(
         apiCall: suspend () -> Response<T>,
     ): ApiResult<T> {

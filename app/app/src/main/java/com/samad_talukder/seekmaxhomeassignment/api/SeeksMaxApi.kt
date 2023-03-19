@@ -12,9 +12,8 @@ import retrofit2.http.Path
 import retrofit2.http.Query
 
 /**
- * Created by Samad Talukder on 18 March 2023.
- * github.com/samadtalukder
- **/
+ * An interface that defines API endpoints for the SeeksMax API.
+ */
 
 interface SeeksMaxApi {
 
@@ -35,7 +34,5 @@ interface SeeksMaxApi {
     ): Response<Jobs>
     @GET("user/user1")
     suspend fun getUserByID(): Response<Jobs>
-
-
 
 }

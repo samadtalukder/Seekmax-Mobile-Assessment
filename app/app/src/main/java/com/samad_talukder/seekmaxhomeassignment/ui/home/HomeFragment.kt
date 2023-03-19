@@ -17,9 +17,10 @@ import dagger.hilt.android.AndroidEntryPoint
 import java.util.Objects.isNull
 
 /**
- * Created by Samad Talukder on 18 March 2023.
- * github.com/samadtalukder
- **/
+ * A simple [Fragment] subclass.
+ * This fragment is responsible for showing the list of jobs.
+ */
+
 @AndroidEntryPoint
 class HomeFragment : Fragment() {
     private val allJobListViewModel: AllJobListViewModel by viewModels()

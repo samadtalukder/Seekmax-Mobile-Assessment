@@ -9,9 +9,8 @@ import com.samad_talukder.seekmaxhomeassignment.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 /**
- * Created by Samad Talukder on 18 March 2023.
- * github.com/samadtalukder
- **/
+ * The main activity of the application that hosts the navigation graph and bottom navigation.
+ */
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
@@ -29,6 +28,4 @@ class MainActivity : AppCompatActivity() {
         binding.bottomNavigation.setupWithNavController(navController)
 
     }
-
-
 }

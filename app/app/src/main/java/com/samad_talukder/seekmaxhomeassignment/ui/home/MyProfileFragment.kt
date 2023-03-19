@@ -16,6 +16,7 @@ import dagger.hilt.android.AndroidEntryPoint
  * Created by Samad Talukder on 18 March 2023.
  * github.com/samadtalukder
  **/
+
 @AndroidEntryPoint
 class MyProfileFragment : Fragment() {
     private lateinit var binding: FragmentMyProfileBinding

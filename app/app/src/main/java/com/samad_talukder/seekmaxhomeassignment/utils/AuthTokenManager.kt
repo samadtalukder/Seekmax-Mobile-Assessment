@@ -1,9 +1,9 @@
 package com.samad_talukder.seekmaxhomeassignment.utils
 
 /**
- * Created by Samad Talukder on 18 March 2023.
- * github.com/samadtalukder
- **/
+ * Class responsible for managing the authentication token of the user.
+ * @param sharedPref Instance of [SharedPref] to handle the shared preferences.
+ */
 
 class AuthTokenManager(private val sharedPref: SharedPref) {
 

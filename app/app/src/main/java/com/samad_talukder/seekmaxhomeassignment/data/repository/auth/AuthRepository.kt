@@ -7,9 +7,8 @@ import com.samad_talukder.seekmaxhomeassignment.domain.model.LoginResponse
 import kotlinx.coroutines.flow.Flow
 
 /**
- * Created by Samad Talukder on 18 March 2023.
- * github.com/samadtalukder
- **/
+ * Interface for the authentication repository.
+ */
 
 interface AuthRepository {
     suspend fun login(context: Context, loginRequest: LoginRequest): Flow<ApiResult<LoginResponse>>

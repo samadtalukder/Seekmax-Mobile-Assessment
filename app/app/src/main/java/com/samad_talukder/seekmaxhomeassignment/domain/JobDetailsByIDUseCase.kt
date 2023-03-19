@@ -3,9 +3,9 @@ package com.samad_talukder.seekmaxhomeassignment.domain
 import com.samad_talukder.seekmaxhomeassignment.data.repository.home.HomeRepository
 
 /**
- * Created by Samad Talukder on 18 March 2023.
- * github.com/samadtalukder
- **/
+ * The use case for get job details by id.
+ * @property HomeRepository The repository for making network calls.
+ */
 
 class JobDetailsByIDUseCase(private val homeRepository: HomeRepository) {
     suspend fun execute(jobID: String) = homeRepository.getJobDetailsByID(jobID)

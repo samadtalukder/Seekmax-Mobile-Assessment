@@ -1,6 +1,5 @@
 package com.samad_talukder.seekmaxhomeassignment.di
 
-
 import com.samad_talukder.seekmaxhomeassignment.data.remote.auth.AuthDataSource
 import com.samad_talukder.seekmaxhomeassignment.data.remote.home.HomeDataSource
 import com.samad_talukder.seekmaxhomeassignment.data.remote.home.HomeDataSourceImpl
@@ -15,8 +14,8 @@ import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
 /**
- * Created by Samad Talukder on 18 March 2023.
- * github.com/samadtalukder
+ * Dagger Hilt module that provides instances of the [AuthRepository], [HomeRepository].
+ * All instances provided by this module are Singleton-scoped.
  **/
 
 @Module

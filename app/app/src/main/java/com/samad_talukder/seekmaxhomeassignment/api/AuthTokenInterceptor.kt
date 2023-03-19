@@ -5,6 +5,9 @@ import okhttp3.Interceptor
 import okhttp3.Response
 import javax.inject.Inject
 
+/**
+ * Interceptor that adds an authorization header with a token obtained from [sharedPref].
+ **/
 class AuthTokenInterceptor @Inject constructor(
     private val sharedPref: SharedPref,
 ) : Interceptor {

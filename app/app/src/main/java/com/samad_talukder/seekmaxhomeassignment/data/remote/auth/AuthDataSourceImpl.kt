@@ -7,9 +7,9 @@ import retrofit2.Response
 import javax.inject.Inject
 
 /**
- * Created by Samad Talukder on 18 March 2023.
- * github.com/samadtalukder
- **/
+ * Implementation of [AuthDataSource] interface that communicates with the remote API using [SeeksMaxApi].
+ * @param seeksMaxApi An instance of [SeeksMaxApi] used to communicate with the remote API.
+ */
 
 class AuthDataSourceImpl @Inject constructor(private var seeksMaxApi: SeeksMaxApi) :
     AuthDataSource {

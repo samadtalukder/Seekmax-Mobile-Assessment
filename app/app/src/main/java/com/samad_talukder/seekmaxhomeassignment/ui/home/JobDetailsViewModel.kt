@@ -14,9 +14,10 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 /**
- * Created by Samad Talukder on 18 March 2023.
- * github.com/samadtalukder
- **/
+ * ViewModel class for displaying job details.
+ * @param application The application context.
+ * @param allJobListUseCase Use case for retrieving job details by ID.
+ */
 
 @HiltViewModel
 class JobDetailsViewModel @Inject constructor(

@@ -4,9 +4,9 @@ import android.app.Application
 import dagger.hilt.android.HiltAndroidApp
 
 /**
- * Created by Samad Talukder on 18 March 2023.
- * github.com/samadtalukder
- **/
+ * Custom application class for the SeekMax app. Extends [Application] and is
+ * annotated with [HiltAndroidApp] to enable Hilt dependency injection.
+*/
 
 @HiltAndroidApp
 class SeekMaxApp : Application() {

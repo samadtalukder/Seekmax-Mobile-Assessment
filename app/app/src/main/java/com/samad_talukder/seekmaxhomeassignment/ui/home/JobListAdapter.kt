@@ -9,6 +9,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.samad_talukder.seekmaxhomeassignment.databinding.ItemJobListBinding
 import com.samad_talukder.seekmaxhomeassignment.domain.model.Jobs
 
+/**
+ * RecyclerView Adapter for displaying a list of [Jobs] in [ItemJobListBinding] views.
+ */
+
 class JobListAdapter : RecyclerView.Adapter<JobListAdapter.JobListViewHolder>() {
     var onClick: ((String) -> Unit)? = null
 

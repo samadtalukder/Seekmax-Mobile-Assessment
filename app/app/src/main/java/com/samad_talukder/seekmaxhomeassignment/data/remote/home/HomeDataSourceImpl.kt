@@ -1,15 +1,16 @@
 package com.samad_talukder.seekmaxhomeassignment.data.remote.home
 
 import com.samad_talukder.seekmaxhomeassignment.api.SeeksMaxApi
+import com.samad_talukder.seekmaxhomeassignment.data.remote.auth.AuthDataSource
 import com.samad_talukder.seekmaxhomeassignment.domain.model.AllJobListResponse
 import com.samad_talukder.seekmaxhomeassignment.domain.model.Jobs
 import retrofit2.Response
 import javax.inject.Inject
 
 /**
- * Created by Samad Talukder on 18 March 2023.
- * github.com/samadtalukder
- **/
+ * Implementation of [HomeDataSource] interface that communicates with the remote API using [SeeksMaxApi].
+ * @param seeksMaxApi An instance of [SeeksMaxApi] used to communicate with the remote API.
+ */
 
 class HomeDataSourceImpl @Inject constructor(private var seeksMaxApi: SeeksMaxApi) :
     HomeDataSource {

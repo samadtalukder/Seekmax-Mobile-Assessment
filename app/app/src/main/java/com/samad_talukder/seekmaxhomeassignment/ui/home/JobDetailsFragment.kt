@@ -13,6 +13,12 @@ import dagger.hilt.android.AndroidEntryPoint
 import java.util.*
 import java.util.Objects.isNull
 
+/**
+ * A fragment to display job details including
+ * job title, company name, job description, and a flag indicating whether
+ * the user has applied for the job or not.
+ */
+
 @AndroidEntryPoint
 class JobDetailsFragment : Fragment() {
     private lateinit var binding: FragmentJobDetailsBinding

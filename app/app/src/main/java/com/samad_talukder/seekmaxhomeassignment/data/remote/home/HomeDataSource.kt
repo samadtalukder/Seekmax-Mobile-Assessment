@@ -7,9 +7,8 @@ import com.samad_talukder.seekmaxhomeassignment.domain.model.LoginResponse
 import retrofit2.Response
 
 /**
- * Created by Samad Talukder on 18 March 2023.
- * github.com/samadtalukder
- **/
+ * Data source interface for job related API calls.
+ */
 
 interface HomeDataSource {
     suspend fun getAllJobList(page: String, perPage: String): Response<AllJobListResponse>

@@ -12,9 +12,8 @@ import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
 /**
- * Created by Samad Talukder on 18 March 2023.
- * github.com/samadtalukder
- **/
+ * This module provides dependencies for all use cases in the application.
+ */
 
 @Module
 @InstallIn(SingletonComponent::class)

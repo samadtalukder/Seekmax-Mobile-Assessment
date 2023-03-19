@@ -6,9 +6,8 @@ import com.samad_talukder.seekmaxhomeassignment.domain.model.Jobs
 import kotlinx.coroutines.flow.Flow
 
 /**
- * Created by Samad Talukder on 18 March 2023.
- * github.com/samadtalukder
- **/
+ * Interface for the job list repository.
+ */
 
 interface HomeRepository {
     suspend fun getAllJobList(

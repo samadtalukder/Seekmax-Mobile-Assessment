@@ -13,9 +13,9 @@ import kotlinx.coroutines.flow.flowOn
 import javax.inject.Inject
 
 /**
- * Created by Samad Talukder on 18 March 2023.
- * github.com/samadtalukder
- **/
+ * Implementation of [AuthRepository] that handles user authentication related operations
+ * @property authDataSource Data source for authentication API calls
+ */
 
 class AuthRepositoryImpl @Inject constructor(private val authDataSource: AuthDataSource) :
     BaseApiResponse(), AuthRepository {

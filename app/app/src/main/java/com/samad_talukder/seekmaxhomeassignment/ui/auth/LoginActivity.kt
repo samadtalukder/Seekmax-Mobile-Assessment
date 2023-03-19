@@ -15,14 +15,14 @@ import dagger.hilt.android.AndroidEntryPoint
 import java.util.Objects.isNull
 
 /**
- * Created by Samad Talukder on 18 March 2023.
- * github.com/samadtalukder
- **/
+ * LoginActivity is responsible for the user login process.
+ * It uses [AuthViewModel] to perform login and authentication.
+ */
 
 @AndroidEntryPoint
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
-    private val authViewModel: AuthViewModel by viewModels()
+    var authViewModel: AuthViewModel by viewModels()
     private lateinit var context: Context
 
 
@@ -51,7 +51,7 @@ class LoginActivity : AppCompatActivity() {
         startActivity(Intent(this, MainActivity::class.java))
     }
 
-    private fun observeLoginApi() {
+    fun observeLoginApi() {
         authViewModel.loginResponse.observe(this) { response ->
             when (response) {
                 is ApiResult.Loading -> {}
