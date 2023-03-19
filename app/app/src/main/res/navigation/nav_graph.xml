@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/menu_home">
+
+
+    <fragment
+        android:id="@+id/menu_home"
+        android:name="com.samad_talukder.seekmaxhomeassignment.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_menu_home_to_jobDetailsFragment"
+            app:destination="@id/jobDetailsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_enter_anim"
+            app:popExitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/menu_applications"
+        android:name="com.samad_talukder.seekmaxhomeassignment.ui.home.MyApplicationsFragment"
+        android:label="fragment_my_applications"
+        tools:layout="@layout/fragment_my_applications" />
+
+    <fragment
+        android:id="@+id/menu_profile"
+        android:name="com.samad_talukder.seekmaxhomeassignment.ui.home.MyProfileFragment"
+        android:label="fragment_my_profile"
+        tools:layout="@layout/fragment_my_profile" />
+    <fragment
+        android:id="@+id/jobDetailsFragment"
+        android:name="com.samad_talukder.seekmaxhomeassignment.ui.home.JobDetailsFragment"
+        android:label="fragment_job_details"
+        tools:layout="@layout/fragment_job_details" >
+        <argument
+            android:name="job_id"
+            android:defaultValue=""
+            app:argType="string" />
+    </fragment>
+
+</navigation>

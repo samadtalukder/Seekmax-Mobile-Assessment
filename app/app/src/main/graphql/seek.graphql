@@ -1,0 +1,26 @@
+query JobsQuery($page: Int) {
+    active(page: $page) {
+        jobs {
+            description
+            _id
+            industry
+            haveIApplied
+            positionTitle
+        }
+    }
+}
+
+query SingleJobQuery($jobId: String!) {
+    job(id: $jobId) {
+        _id
+        description
+        haveIApplied
+        industry
+        location
+        positionTitle
+        salaryRange {
+            max
+            min
+        }
+    }
+}

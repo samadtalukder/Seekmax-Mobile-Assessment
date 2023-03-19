@@ -1,0 +1,15 @@
+{
+  "name": "GraphQL Schema",
+  "schemaPath": "seek.graphql",
+  "extensions": {
+    "endpoints": {
+      "Default GraphQL Endpoint": {
+        "url": "http://localhost:3002/",
+        "headers": {
+          "user-agent": "JS GraphQL"
+        },
+        "introspect": false
+      }
+    }
+  }
+}
