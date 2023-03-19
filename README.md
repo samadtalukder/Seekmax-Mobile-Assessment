@@ -41,6 +41,22 @@ Use a source code management strategy that serves the purpose for submission. (F
 Colors: `/design/ColorDesign.png`
 Fonts: `/design/TextDesign.png`
 
+## App (Android)
+This Android project is developed using Kotlin and follows the Model-View-ViewModel (MVVM) design pattern to separate the presentation logic from the business logic. 
+Coroutines are also used to perform asynchronous operations in a more efficient and readable manner. 
+The Material Design framework is used for the UI components, providing a modern and consistent look and feel.
+In addition, Hilt-Dagger is used as a dependency injection framework to manage the app's dependencies.
+The project also integrates GraphQL, a powerful query language for APIs
+### Prerequisites
+* Download Android Studio
+
+### Run
+* Clone the repository onto your local machine
+* Open Android Studio and navigate to the directory where you cloned the repository
+* Wait for the Gradle build to finish
+* Connect your Android device to your computer or launch an emulator
+* Click the "Run" button in Android Studio and select your device/emulator
+
 ## Backend
 
 A basic backend implementation have been provided in the attached backend folder with a GraphQL -> NodeJS Rest API -> MongoDB setup.
