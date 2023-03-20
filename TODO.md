@@ -5,7 +5,7 @@
 * The logged-in session needs to be stored
   - The form of the Session will be a JWT-Token
 * Add Logout capabilities
-* Show list of active (where the status is `PUBLISHED`) job ads (without pagination or lazy loading) (refer to `/design/JobList.png`)
+* Show list of active (where the status is `PUBLISHED`) job ads (with pagination or lazy loading) (refer to `/design/JobList.png`)
 * Add an indicator to the list screen whether the currently authenticated user already applied to a specific job
 * Display job ads details with API integration
 * Created only `My Profile` &  `Show My Applications` Tab
