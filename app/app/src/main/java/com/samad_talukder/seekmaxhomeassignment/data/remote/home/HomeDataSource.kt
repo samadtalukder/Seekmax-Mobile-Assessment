@@ -11,7 +11,7 @@ import retrofit2.Response
  */
 
 interface HomeDataSource {
-    suspend fun getAllJobList(page: String, perPage: String): Response<AllJobListResponse>
+    suspend fun getAllJobList(page: Int): Response<AllJobListResponse>
     suspend fun getJobDetailsByID(jobID: String): Response<Jobs>
     suspend fun getUserByID(): Response<Jobs>
 }

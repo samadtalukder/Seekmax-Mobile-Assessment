@@ -1,6 +1,7 @@
 package com.samad_talukder.seekmaxhomeassignment.di
 
 
+import com.apollographql.apollo.ApolloClient
 import com.samad_talukder.seekmaxhomeassignment.BuildConfig
 import com.samad_talukder.seekmaxhomeassignment.api.AuthTokenInterceptor
 import com.samad_talukder.seekmaxhomeassignment.api.SeeksMaxApi
@@ -79,6 +80,15 @@ object ApiModule {
             .baseUrl(BuildConfig.REST_API)
             .client(okHttpClient)
             .addConverterFactory(gsonConverterFactory)
+            .build()
+    }
+
+    @Singleton
+    @Provides
+    fun providerGraphqlClient(okHttpClient: OkHttpClient): ApolloClient {
+        return ApolloClient.builder()
+            .serverUrl(BuildConfig.GRAPH_API)
+            .okHttpClient(okHttpClient)
             .build()
     }
 

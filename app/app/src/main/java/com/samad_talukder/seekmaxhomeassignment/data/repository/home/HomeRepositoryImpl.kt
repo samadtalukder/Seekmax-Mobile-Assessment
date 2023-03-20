@@ -3,7 +3,6 @@ package com.samad_talukder.seekmaxhomeassignment.data.repository.home
 import com.samad_talukder.seekmaxhomeassignment.api.ApiResult
 import com.samad_talukder.seekmaxhomeassignment.api.BaseApiResponse
 import com.samad_talukder.seekmaxhomeassignment.data.remote.home.HomeDataSource
-import com.samad_talukder.seekmaxhomeassignment.data.repository.auth.AuthRepository
 import com.samad_talukder.seekmaxhomeassignment.domain.model.AllJobListResponse
 import com.samad_talukder.seekmaxhomeassignment.domain.model.Jobs
 import kotlinx.coroutines.Dispatchers
@@ -20,12 +19,11 @@ import javax.inject.Inject
 class HomeRepositoryImpl @Inject constructor(private val homeDataSource: HomeDataSource) :
     BaseApiResponse(), HomeRepository {
     override suspend fun getAllJobList(
-        page: String,
-        perPage: String
+        page: Int,
     ): Flow<ApiResult<AllJobListResponse>> {
         return flow {
             emit(
-                safeApiCall { homeDataSource.getAllJobList(page, perPage) }
+                safeApiCall { homeDataSource.getAllJobList(page) }
             )
         }.flowOn(Dispatchers.IO)
     }

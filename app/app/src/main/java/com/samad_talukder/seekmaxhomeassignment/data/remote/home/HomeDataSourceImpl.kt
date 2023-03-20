@@ -16,10 +16,9 @@ class HomeDataSourceImpl @Inject constructor(private var seeksMaxApi: SeeksMaxAp
     HomeDataSource {
 
     override suspend fun getAllJobList(
-        page: String,
-        perPage: String
+        page: Int
     ): Response<AllJobListResponse> {
-        return seeksMaxApi.getAllJobList(page, perPage)
+        return seeksMaxApi.getAllJobList(page,10)
     }
 
     override suspend fun getJobDetailsByID(jobID: String): Response<Jobs> {

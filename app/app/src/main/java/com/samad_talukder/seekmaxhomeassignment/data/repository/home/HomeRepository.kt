@@ -11,8 +11,7 @@ import kotlinx.coroutines.flow.Flow
 
 interface HomeRepository {
     suspend fun getAllJobList(
-        page: String,
-        perPage: String
+        page: Int,
     ): Flow<ApiResult<AllJobListResponse>>
 
     suspend fun getJobDetailsByID(

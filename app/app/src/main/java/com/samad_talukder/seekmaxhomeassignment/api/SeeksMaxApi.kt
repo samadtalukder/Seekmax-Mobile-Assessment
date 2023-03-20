@@ -22,10 +22,11 @@ interface SeeksMaxApi {
         @Body loginRequest: LoginRequest
     ): Response<LoginResponse>
 
-    @GET("jobs")
+    @GET("jobs/published")
     suspend fun getAllJobList(
-        @Query("page") page: String,
-        @Query("per_page") perPage: String
+        @Query("page") page: Int,
+        @Query("per_page") perPage: Int,
+
     ): Response<AllJobListResponse>
 
     @GET("jobs/{jobID}")

@@ -8,6 +8,6 @@ import com.samad_talukder.seekmaxhomeassignment.data.repository.home.HomeReposit
  */
 
 class AllJobListUseCase(private val homeRepository: HomeRepository) {
-    suspend fun execute(page: String, perPage: String) =
-        homeRepository.getAllJobList(page, perPage)
+    suspend fun execute(page: Int) =
+        homeRepository.getAllJobList(page)
 }

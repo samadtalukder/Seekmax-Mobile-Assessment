@@ -1,6 +1,8 @@
 package com.samad_talukder.seekmaxhomeassignment.api
 
 
+import com.apollographql.apollo.ApolloCall
+import com.apollographql.apollo.coroutines.await
 import retrofit2.Response
 
 /**
@@ -35,6 +37,18 @@ abstract class BaseApiResponse {
             return ApiResult.Error(e.message ?: e.toString(), 400)
         }
         return ApiResult.Error("Unknown Error", 400)
+    }
+
+    suspend fun <T : Any> graphQueryCall(call: () -> ApolloCall<T>): com.apollographql.apollo.api.Response<T> {
+        val graphCall: ApolloCall<T> = call()
+        return try {
+            graphCall.await()
+        } catch (t: Throwable) {
+            val operation = graphCall.operation()
+
+            com.apollographql.apollo.api.Response.builder<T>(operation)
+                .errors(listOf(com.apollographql.apollo.api.Error(t.message ?: "Error"))).build()
+        }
     }
 
 }

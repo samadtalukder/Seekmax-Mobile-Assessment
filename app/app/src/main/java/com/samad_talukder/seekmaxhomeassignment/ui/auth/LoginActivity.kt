@@ -22,7 +22,7 @@ import java.util.Objects.isNull
 @AndroidEntryPoint
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
-    var authViewModel: AuthViewModel by viewModels()
+    private val authViewModel: AuthViewModel by viewModels()
     private lateinit var context: Context
 
 
@@ -33,7 +33,7 @@ class LoginActivity : AppCompatActivity() {
 
         context = this
 
-        if (!authViewModel.getTokenPref().isNullOrEmpty()){
+        if (!authViewModel.getTokenPref().isNullOrEmpty()) {
             goToMainActivity()
         }
 
@@ -48,7 +48,9 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun goToMainActivity() {
-        startActivity(Intent(this, MainActivity::class.java))
+        val intent = Intent(context, MainActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        startActivity(intent)
     }
 
     fun observeLoginApi() {

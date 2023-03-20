@@ -30,10 +30,10 @@ class AllJobListViewModel @Inject constructor(
         _allJobListResponse
 
 
-    fun getAllJobList(page: String, perPage: String) = viewModelScope.launch {
+    fun getAllJobList(page:Int) = viewModelScope.launch {
         _allJobListResponse.value = ApiResult.Loading
 
-        allJobListUseCase.execute(page, perPage).collect { values ->
+        allJobListUseCase.execute(page).collect { values ->
             _allJobListResponse.value = values
         }
     }
